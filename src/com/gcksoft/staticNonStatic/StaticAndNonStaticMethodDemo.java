@@ -27,7 +27,7 @@ public class StaticAndNonStaticMethodDemo {
 
 	}
 	
-	//void - it won't return anything
+	//Here return type is void - it won't return anything
 	public static void add2(int a, int b) {
 		int result = a+b;
 		System.out.println(result);//6
