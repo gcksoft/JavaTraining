@@ -7,7 +7,7 @@ public class StaticAndNonStaticMethodDemo {
     //predefind method
 	public static void main(String[] args) {
 		int c =10;
-		//calling static variable 
+		//accessing static variable 
 		    System.out.println(a);
 		    
 		//customised static method calling
@@ -23,8 +23,6 @@ public class StaticAndNonStaticMethodDemo {
 		object.add(2,4);
 		float result = object.add1(3,5);
 		System.out.println(result);
-		
-
 	}
 	
 	//Here return type is void - it won't return anything
