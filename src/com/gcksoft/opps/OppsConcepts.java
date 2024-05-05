@@ -6,20 +6,11 @@ class Parent{
 	void parentMethod() {
 		System.out.println("Parent Drive : "+bike);
 	}
-	
-	//Overriding
-	void house() {
-		System.out.println("Parent House....");
-	}
 }
 
 class Child extends Parent{
 	void childMethod() {
 		System.out.println("Child Drive : "+bike);
-	}
-	//Overriding
-	void house() {
-		System.out.println("Parent House....renovated");
 	}
 }
 
@@ -33,12 +24,30 @@ class OverLoading{
 	}
 }
 
+//Overriding
+class Super{
+	
+	  void house() {
+	  System.out.println("Super implmentation....");
+	  }
+	 
+}
+
+class Sub extends Super{
+	
+	  void house() { 
+	  System.out.println("Sub implmentation....."); 
+	  }
+	 
+}
+
 
 
 public class OppsConcepts {
 	public static void main(String[] args) {
 		
 		//Inheritance example
+		System.out.println("Inheritance ...........>>>>>>");
 		Parent p = new Parent();
 		p.parentMethod();
 		Child c = new Child(); 
@@ -50,12 +59,15 @@ public class OppsConcepts {
 		ol.house(1);
 		ol.house(1.5f);
 		
-		System.out.println("Overriding ...........>>>>>>>");
-		Parent p1 = new Parent();
-		p1.house();
+		System.out.println("Overriding .............>>>>>>");
+		Super sp = new Super();
+		sp.house();
 		
-		Parent p2 = new Child();
-		p1.house();
+		Sub sub = new Sub();
+		sub.house();
+		
+		Super sp1 = new Sub();
+		   sp1.house(); 
 	}
 
 }
