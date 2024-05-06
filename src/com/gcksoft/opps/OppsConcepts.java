@@ -34,13 +34,50 @@ class Super{
 }
 
 class Sub extends Super{
-	
+	  void salary() {
+		  
+	  }
 	  void house() { 
 	  System.out.println("Sub implmentation....."); 
 	  }
 	 
 }
 
+//abstract
+interface RBIBank{
+	int a = 10;
+	void salary();//abstract void salary();
+}
+
+abstract class Bank{
+	abstract void salary();
+	void credit() {
+		System.out.println("Abstract class implementation...>>>");
+	}
+}
+
+class ICICIBank extends Bank{
+	void salary() {
+		
+	}
+}
+
+class Student{
+	private int stdId;
+	private String stdName;
+	public int getStdId() {
+		return stdId;
+	}
+	public void setStdId(int stdId) {
+		this.stdId = stdId;
+	}
+	public String getStdName() {
+		return stdName;
+	}
+	public void setStdName(String stdName) {
+		this.stdName = stdName;
+	}
+}
 
 
 public class OppsConcepts {
@@ -68,6 +105,18 @@ public class OppsConcepts {
 		
 		Super sp1 = new Sub();
 		   sp1.house(); 
+		   
+		System.out.println("Encapsulation ..............>>>>>>>");
+		Student student = new Student();	
+		student.setStdId(12);
+		System.out.println(student.getStdId());
+		
+		System.out.println("interface and abstract........>>>>>>"); 
+		System.out.println(RBIBank.a);
+		Bank bank = new ICICIBank();
+		bank.credit();
+		
+		
 	}
 
 }
