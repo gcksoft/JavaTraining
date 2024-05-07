@@ -46,25 +46,31 @@ class Sub extends Super{
 //abstract
 interface RBIBank{
 	int a = 10;
-	void salary();//abstract void salary();
+	void credit();//abstract void salary();
 }
 
-abstract class Bank{
-	abstract void salary();
+abstract class SBIBank{
+	abstract void debit();
 	void credit() {
-		System.out.println("Abstract class implementation...>>>");
+		System.out.println("credit implementation...>>>");
 	}
 }
 
-class ICICIBank extends Bank{
-	void salary() {
-		
+class SBHBank extends SBIBank{
+	void debit() {
+		System.out.println("debit implementation...>>>");
 	}
 }
 
 class Student{
 	private int stdId;
 	private String stdName;
+	//constractor
+	public Student(int id) {
+		System.out.println("constract executed");
+		stdId = id;
+	}
+	
 	public int getStdId() {
 		return stdId;
 	}
@@ -106,15 +112,17 @@ public class OppsConcepts {
 		Super sp1 = new Sub();
 		   sp1.house(); 
 		   
-		System.out.println("Encapsulation ..............>>>>>>>");
-		Student student = new Student();	
-		student.setStdId(12);
-		System.out.println(student.getStdId());
-		
 		System.out.println("interface and abstract........>>>>>>"); 
 		System.out.println(RBIBank.a);
-		Bank bank = new ICICIBank();
+		SBIBank bank = new SBHBank();
 		bank.credit();
+		
+		System.out.println("Encapsulation ..............>>>>>>>");
+		Student student = new Student(36);
+		System.out.println(student.getStdId());
+		
+		student.setStdId(12);
+		System.out.println(student.getStdId());
 		
 		
 	}

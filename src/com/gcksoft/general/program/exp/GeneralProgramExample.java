@@ -1,9 +1,10 @@
 package com.gcksoft.general.program.exp;
 
 public class GeneralProgramExample {
-
+	int a;//instance/global/dynamic variable
+	static int b;   //static variable
 	public static void main(String[] args) {
-		  final int A = 10;
+		  int c = 10;//local variable
 		  reverseString();
 	}
 
