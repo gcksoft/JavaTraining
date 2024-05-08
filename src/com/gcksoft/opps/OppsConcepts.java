@@ -65,7 +65,7 @@ class SBHBank extends SBIBank{
 class Student{
 	private int stdId;
 	private String stdName;
-	//constractor
+	//constructor
 	public Student(int id) {
 		System.out.println("constract executed");
 		stdId = id;
