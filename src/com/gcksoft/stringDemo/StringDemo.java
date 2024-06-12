@@ -5,6 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StringDemo {
+
+	public static void main(String[] args) {
+		//nCopies(4,"vamsee kris");
+		stringMethodExamples();
+		
+	}
 	
 	public static void nCopies(int n,String name) 
 	{
@@ -15,9 +21,9 @@ public class StringDemo {
 		System.out.println(list);
 	}
 	
-   //string methods
+   //string methods examples
 	public static void stringMethodExamples() {
-		String str = "VASEESAASDDD";
+		String str = "VASEE SABSDAA";
 		System.out.println(str.length());
 		
 		System.out.println(str.toLowerCase());
@@ -34,12 +40,19 @@ public class StringDemo {
 		
 		System.out.println(array[3]);
 		
-	}
-
-	public static void main(String[] args) {
-		//nCopies(4,"vamsee kris");
-		stringMethodExamples();
+		System.out.println(str.endsWith("DD"));
+		System.out.println(str.startsWith("V"));
+		
+		System.out.println(str.charAt(5));
+		
+		String name = "krishna";
+		String surname = "Krishna";
+		System.out.println("Checking equals method......");
+		System.out.println(name.equals(surname));
+		System.out.println(name.equalsIgnoreCase(surname));
+		
 		
 	}
+
 
 }
