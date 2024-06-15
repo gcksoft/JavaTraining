@@ -51,6 +51,17 @@ public class StringDemo {
 		System.out.println(name.equals(surname));
 		System.out.println(name.equalsIgnoreCase(surname));
 		
+		new StringDemo().stringImmutableExample();
+		
+	}
+	
+	public void stringImmutableExample() {
+		String s1 = "abc";
+		String s2 = "abc";
+		
+		s1.concat("def");//abcdef
+		System.out.println("stringImmutableExample...");
+		System.out.println(s1);
 		
 	}
 
